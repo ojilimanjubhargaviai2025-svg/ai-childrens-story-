@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Children's Story</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff3e0;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        button {
+            background: #ff9800;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        #story {
+            margin-top: 20px;
+            line-height: 1.8;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌈 AI Children's Story Generator</h1>
+        <p>Click the button to create a magical story!</p>
+
+        <button onclick="generateStory()">Generate Story</button>
+
+        <div id="story"></div>
+    </div>
+
+    <script>
+        function generateStory() {
+            const stories = [
+                {
+                    title: "The Magical Rabbit 🐰",
+                    text: "Once upon a time, a little rabbit lived in a beautiful forest. One day, it found a magical carrot that could make plants grow. The rabbit helped all the animals by growing delicious food. Everyone became happy, and the rabbit learned that sharing brings joy."
+                },
+                {
+                    title: "The Brave Little Bird 🐦",
+                    text: "A little bird was afraid to fly. One morning, it decided to try. With courage and practice, it flew across the garden. Its friends cheered happily. The bird learned that believing in yourself helps you overcome fear."
+                },
+                {
+                    title: "The Friendly Dragon 🐉",
+                    text: "A small dragon lived near a village. People were afraid of him, but he only wanted friends. One day, he helped a lost child return home. The villagers discovered his kind heart and welcomed him. The dragon learned that kindness creates friendship."
+                }
+            ];
+
+            const randomIndex = Math.floor(Math.random() * stories.length);
+            const selectedStory = stories[randomIndex];
+
+            document.getElementById("story").innerHTML =
+                "<h2>" + selectedStory.title + "</h2>" +
+                "<p>" + selectedStory.text + "</p>";
+        }
+    </script>
+</body>
+</html>
